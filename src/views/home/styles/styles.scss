@@ -1,0 +1,61 @@
+
+.post {
+    /* Activa el cursor en la etiqueta a */
+    cursor: pointer;
+    position: relative;
+    /* Por defecto un ancla viene sin display: ; */
+    display: block;
+    /* width: 300px; */
+    /* margin-bottom: 10px; */
+  }
+  
+  .post-image {
+    margin: 0;
+    height: 100%;
+  }
+  
+  .post-image img {
+    width: 100%;
+    /* margen abajo de las imagenes */
+    vertical-align: top;
+  }
+  
+  .post-overlay {
+    /* red green blue alfa => transparencia */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Se ajusta al elemento con posicion relativa mas cercano */
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+  
+  .post:active .post-overlay {
+    display: flex;
+  }
+  
+  .post-likes,
+  .post-comments {
+    width: 80px;
+    margin: 5px;
+    font-weight: bold;
+    text-align: center;
+    /* inline-block le permitimos al elemento tener padding y marghin */
+    display: inline-block;
+  }
+  
+  .post-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 293px));
+    justify-content: center;
+    gap: 28px;
+    height: max-content;
+    
+  }
+  
