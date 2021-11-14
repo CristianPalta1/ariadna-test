@@ -1,61 +1,112 @@
+.moviesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 200px;
+  margin-right: 200px;
+  .catgoriesBar {
+    align-self: flex-start;
 
-.post {
-    /* Activa el cursor en la etiqueta a */
-    cursor: pointer;
-    position: relative;
-    /* Por defecto un ancla viene sin display: ; */
-    display: block;
-    /* width: 300px; */
-    /* margin-bottom: 10px; */
+    ul {
+      margin: 60px 20px;
+      padding: 0;
+      list-style: none;
+      display: flex;
+
+      li {
+        font-size: 16px;
+        margin-right: 50px;
+        padding: 4px 10px;
+        font-weight: 600;
+        cursor: pointer;
+
+        &.active {
+          border-bottom: 2px solid black;
+        }
+      }
+    }
   }
-  
-  .post-image {
-    margin: 0;
-    height: 100%;
-  }
-  
-  .post-image img {
-    width: 100%;
-    /* margen abajo de las imagenes */
-    vertical-align: top;
-  }
-  
-  .post-overlay {
-    /* red green blue alfa => transparencia */
-    background-color: rgba(0, 0, 0, 0.4);
-    /* Se ajusta al elemento con posicion relativa mas cercano */
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-  }
-  
-  .post:active .post-overlay {
-    display: flex;
-  }
-  
-  .post-likes,
-  .post-comments {
-    width: 80px;
-    margin: 5px;
-    font-weight: bold;
-    text-align: center;
-    /* inline-block le permitimos al elemento tener padding y marghin */
-    display: inline-block;
-  }
-  
+
   .post-list {
     display: grid;
-    grid-template-columns: repeat(3, minmax(100px, 293px));
-    justify-content: center;
+    grid-template-columns: repeat(4, minmax(100px, 293px));
+    // justify-content: center;
     gap: 28px;
-    height: max-content;
-    
+
+    .post {
+      /* Activa el cursor en la etiqueta a */
+      cursor: pointer;
+      position: relative;
+      /* Por defecto un ancla viene sin display: ; */
+      display: flex;
+      color: #ffffff;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.5s ease;
+
+      .postInfoContainer {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h3 {
+          display: none;
+          font-size: 24px;
+          text-align: center;
+        }
+      }
+
+      .post-image {
+        margin: 0;
+        height: 100%;
+      }
+
+      .post-image img {
+        width: 100%;
+        /* margen abajo de las imagenes */
+        vertical-align: top;
+      }
+
+      &:hover {
+        background-color: #000;
+
+        img {
+          opacity: 0.2;
+        }
+        h3 {
+          display: inline;
+        }
+      }
+    }
   }
-  
+}
+
+.post-overlay {
+  /* red green blue alfa => transparencia */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Se ajusta al elemento con posicion relativa mas cercano */
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.post:active .post-overlay {
+  display: flex;
+}
+
+.post-likes,
+.post-comments {
+  width: 80px;
+  margin: 5px;
+  font-weight: bold;
+  text-align: center;
+  /* inline-block le permitimos al elemento tener padding y marghin */
+  display: inline-block;
+}
