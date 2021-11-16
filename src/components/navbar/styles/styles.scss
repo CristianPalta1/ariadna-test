@@ -1,11 +1,21 @@
+@import "../../../global.scss";
+
 .header {
   flex-wrap: wrap;
- }
+  @include mobile {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+}
 
 .menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @include mobile {
+    display: none;
+  }
 }
 
 .container {
@@ -13,6 +23,43 @@
   grid-template-columns: 200px 1fr;
   grid-template-rows: 70px;
   margin: 0 110px;
+  @include mobile {
+    position: relative;
+
+    grid-template-columns: 100px 260px;
+    grid-area: "logo icon";
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+}
+
+.hamburger-menu {
+  display: none;
+  @include mobile {
+    grid-area: icon;
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    display: flex;
+    // background-color: red;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+.new-menu {
+  position: absolute;
+  z-index: 1;
+  top: 70px;
+  display: flex;
+  flex: auto;
+  width: 100%;
+  height: 100px;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
 }
 
 .logo {
@@ -20,12 +67,28 @@
   flex: auto;
   justify-content: center;
   align-items: center;
-  background-color: yellow;
+  margin-left: -25px;
+  @include mobile {
+    margin-left: 0;
+    grid-area: logo;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+  }
+}
+
+.img-logo {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  @include mobile {
+    width: 90%;
+    height: 90%;
+  }
 }
 
 .menu ol {
   display: flex;
-  background-color: green;
+
   flex: auto;
   justify-content: flex-end;
   align-items: center;
@@ -40,18 +103,77 @@
   list-style: none;
   height: inherit;
 }
+.menu ol li:nth-of-type(4) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  height: inherit;
+  // border-bottom: 1px solid black;
+  background-color: #eeeeee;
+  width: 160px;
+}
+.menu ol li:nth-of-type(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  height: inherit;
+  // border-bottom: 1px solid black;
+  background-color: #fde531;
+}
 .menu ol li a {
   text-decoration: none;
   padding: 1.3rem;
   color: black;
-  font-weight: 600;
+  font-weight: 900;
   height: 100%;
-  
 }
-.menu ol li:active {
+
+/*Menu Hamburgesa */
+.new-menu ol {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba($color: #000000, $alpha: 0.4);
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.new-menu ol li {
+  list-style: none;
+}
+.new-menu ol li:nth-of-type(4) {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fce631;
-  height: 100%;
+  list-style: none;
+
+  // border-bottom: 1px solid black;
+  // background-color: #eeeeee;
+  width: 80px;
 }
+// .new-menu ol li:nth-of-type(1) {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   list-style: none;
+//   height: inherit;
+//   // border-bottom: 1px solid black;
+//   background-color: #fde531;
+// }
+.new-menu ol li a {
+  text-decoration: none;
+
+  color: black;
+  font-weight: 900;
+}
+.new-menu ol li a:hover {
+  background-color: rgba($color: #fff, $alpha: 0.6);
+}
+
+// .active, .btn:hover {
+//   background-color: #666;
+//   color: white;
+// }
