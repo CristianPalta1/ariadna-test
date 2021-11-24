@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/ariadna-test/static/css/main.0be6bfdc.chunk.css",
+    "main.js": "/ariadna-test/static/js/main.026b0e46.chunk.js",
+    "main.js.map": "/ariadna-test/static/js/main.026b0e46.chunk.js.map",
+    "runtime-main.js": "/ariadna-test/static/js/runtime-main.388df12b.js",
+    "runtime-main.js.map": "/ariadna-test/static/js/runtime-main.388df12b.js.map",
+    "static/js/2.8022c735.chunk.js": "/ariadna-test/static/js/2.8022c735.chunk.js",
+    "static/js/2.8022c735.chunk.js.map": "/ariadna-test/static/js/2.8022c735.chunk.js.map",
+    "static/js/3.2513a527.chunk.js": "/ariadna-test/static/js/3.2513a527.chunk.js",
+    "static/js/3.2513a527.chunk.js.map": "/ariadna-test/static/js/3.2513a527.chunk.js.map",
+    "index.html": "/ariadna-test/index.html",
+    "static/css/main.0be6bfdc.chunk.css.map": "/ariadna-test/static/css/main.0be6bfdc.chunk.css.map",
+    "static/js/2.8022c735.chunk.js.LICENSE.txt": "/ariadna-test/static/js/2.8022c735.chunk.js.LICENSE.txt",
+    "static/media/avengers-infinity-war.0a4a6351.png": "/ariadna-test/static/media/avengers-infinity-war.0a4a6351.png",
+    "static/media/banner-aquaman.2d086bce.jpg": "/ariadna-test/static/media/banner-aquaman.2d086bce.jpg",
+    "static/media/banner-bumblebee.d7d9d9a6.jpg": "/ariadna-test/static/media/banner-bumblebee.d7d9d9a6.jpg",
+    "static/media/banner-venom.9cc1f53c.png": "/ariadna-test/static/media/banner-venom.9cc1f53c.png",
+    "static/media/bohemian-rhapsody.8cf30df7.jpg": "/ariadna-test/static/media/bohemian-rhapsody.8cf30df7.jpg",
+    "static/media/deadpool.13f52185.png": "/ariadna-test/static/media/deadpool.13f52185.png",
+    "static/media/first-man.f95f157d.jpg": "/ariadna-test/static/media/first-man.f95f157d.jpg",
+    "static/media/han-solo.b4e1057c.jpg": "/ariadna-test/static/media/han-solo.b4e1057c.jpg",
+    "static/media/incredibles.a512e6b1.jpg": "/ariadna-test/static/media/incredibles.a512e6b1.jpg",
+    "static/media/jurassic-world.329dc70d.jpg": "/ariadna-test/static/media/jurassic-world.329dc70d.jpg",
+    "static/media/venom.94ec1825.jpg": "/ariadna-test/static/media/venom.94ec1825.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.388df12b.js",
+    "static/js/2.8022c735.chunk.js",
+    "static/css/main.0be6bfdc.chunk.css",
+    "static/js/main.026b0e46.chunk.js"
+  ]
+}
